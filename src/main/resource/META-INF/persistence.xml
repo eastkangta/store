@@ -11,27 +11,17 @@
 		<!--可选 -->
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 		<!--可选 -->
-		<validation-mode>CALLBACK</validation-mode>
+		<validation-mode>NONE</validation-mode>
 
 		<!--厂商的特定属性 -->
 		<properties>
-			<property name="javax.persistence.validation.mode"  value="none"/>
-		
-			<!--配置Hibernate方言 -->
-			<property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider"/>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
-			<!--配置数据库驱动 -->
-			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<!--配置数据库用户名 -->
-			<property name="hibernate.connection.username" value="kangta" />
-			<!--配置数据库密码 -->
-			<property name="hibernate.connection.password" value="131313" />
-			<!--配置数据库url -->
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/store?characterEncoding=UTF-8" />
-			<!--设置外连接抓取树的最大深度 -->
-			<property name="hibernate.max_fetch_depth" value="3" />
+			<property name="javax.persistence.validation.mode" value="none" />
+			<!--显示最终执行的sql -->
+			<property name="hibernate.show_sql" value="true" />
+			<!--格式化显示最终执行的sql -->
+			<property name="hibernate.formate_sql" value="true" />
 			<!--自动输出schema创建DDL语句 -->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
 	</persistence-unit>
 </persistence>
