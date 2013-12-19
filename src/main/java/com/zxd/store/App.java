@@ -1,5 +1,7 @@
 package com.zxd.store;
 
+import javax.servlet.http.HttpServlet;
+
 
 
 
@@ -12,6 +14,5 @@ public class App
 {
     public static void main( String[] args )
     {
-    	WebServiceTemplate 
     }
 }
