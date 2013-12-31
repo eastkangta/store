@@ -1,11 +1,16 @@
 package com.zxd.store.dao.impl;
 
-import com.zxd.store.dao.AbstractBaseDAO;
+import org.springframework.stereotype.Repository;
+
 import com.zxd.store.dao.IUserDAO;
+import com.zxd.store.entity.User;
 
 
-public class UserDAO  extends AbstractBaseDAO implements IUserDAO{
-	public void add(){
-		getEntityManager().createNamedQuery("select * from t_user");
+@Repository
+public class UserDAO  extends BaseDAO<User> implements IUserDAO{
+	@Override
+	public void add(User user) {
+		
+		super.add(user);
 	}
 }

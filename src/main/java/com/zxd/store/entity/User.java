@@ -1,11 +1,15 @@
-package com.zxd.store.po;
+package com.zxd.store.entity;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String id;
 	
@@ -14,6 +18,13 @@ public class User {
 	
 	@Column
 	private String password;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

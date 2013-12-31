@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 
-public class AbstractBaseDAO {
+public class AbstractBaseDAO{
 	
 	@PersistenceContext(name ="storePU")
 	public EntityManager entityManager;
